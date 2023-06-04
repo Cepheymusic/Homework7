@@ -98,17 +98,19 @@ public class Main {
     public static void task7() {
         System.out.println("Задача7");
         int numberOfDays = 31;
-        for (int friday = 5; friday < numberOfDays; friday = friday + 7) {
+        int friday = 5;
+        for (; friday < numberOfDays; friday = friday + 7) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчёт");
         }
     }
     public static void task8() {
         System.out.println("Задача8");
-        int lastYear = 1817;
-        int futureYear = 2117;
-        while (lastYear < futureYear) {
-            lastYear = lastYear + 79;
-                System.out.println(lastYear);
+        int currentYear = 2023;
+        for (int year = 0; year <= currentYear + 100; year += 79) {
+            if (year >= currentYear - 200) {
+                System.out.println(year);
+            }
+
         }
     }
 }
